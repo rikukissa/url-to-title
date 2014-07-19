@@ -1,8 +1,9 @@
 # url-to-title
 
-[![NPM version][npm-image]][npm-url] 
-[![Downloads][downloads-image]][npm-url] 
+[![NPM version][npm-image]][npm-url]
+[![Downloads][downloads-image]][npm-url]
 [![Issue tracking][issues-image]][issues-url]
+[![Travis CI][travis-image]][travis-url]
 
 Well tested and easy to use page title scraper
 
@@ -61,3 +62,5 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 [issues-url]: https://github.com/rikukissa/url-to-title/issues
 [issues-image]: http://img.shields.io/github/issues/rikukissa/url-to-title.svg
+[travis-url]: http://travis-ci.org/rikukissa/url-to-title
+[travis-image]: http://img.shields.io/travis/rikukissa/url-to-title.svg
