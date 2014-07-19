@@ -1,6 +1,6 @@
 {
   "name": "url-to-title",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Scrape the title of an url",
   "main": "index.js",
   "scripts": {
