@@ -1,0 +1,32 @@
+{
+  "name": "url-to-title",
+  "version": "1.0.0",
+  "description": "Scrape the title of an url",
+  "main": "index.js",
+  "scripts": {
+    "test": "NODE_ENV=test mocha"
+  },
+  "keywords": [
+    "url",
+    "title",
+    "scraper"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rikukissa/url-to-title.git"
+  },
+  "author": "Riku Rouvila",
+  "license": "MIT",
+  "dependencies": {
+    "request": "~2.34.0",
+    "iconv-lite": "~0.2.11",
+    "he": "~0.4.1",
+    "jschardet": "~1.1.0",
+    "lodash": "~2.4.1",
+    "bluebird": "~2.2.2"
+  },
+  "devDependencies": {
+    "mocha": "~1.17.1",
+    "express": "~4.6.1"
+  }
+}
