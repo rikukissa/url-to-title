@@ -65,4 +65,11 @@ describe('Title scraper', function() {
     .catch(done.bind(null, null));
   });
 
+  it('should make requests with an user agent header set', function(done) {
+    title(u('user-agent'))
+    .then(function(title) {
+      assert.equal(title, 'bar');
+      done();
+    });
+  });
 });
