@@ -28,6 +28,17 @@ app.get('/image', function(req, res) {
   res.sendfile(path.join(__dirname, 'files', 'image.jpg'));
 });
 
+app.get('/user-agent', function(req, res) {
+  var userAgent = req.get('User-Agent');
+  var title = '<title>Update your browser</title>';
+
+  if(userAgent !== undefined && userAgent.length > 0) {
+    title = '<title>bar</title>';
+  }
+
+  res.send(title);
+});
+
 if(require.main === module) {
   app.listen(9005);
 }
