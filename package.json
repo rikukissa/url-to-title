@@ -1,6 +1,6 @@
 {
   "name": "url-to-title",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Scrape the title of an url",
   "main": "index.js",
   "scripts": {
@@ -27,6 +27,7 @@
   },
   "devDependencies": {
     "mocha": "~1.17.1",
-    "express": "~4.6.1"
+    "express": "~4.6.1",
+    "compression": "~1.2.0"
   }
 }

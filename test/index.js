@@ -72,4 +72,14 @@ describe('Title scraper', function() {
       done();
     });
   });
+
+  it('should know how to handle gzipped content', function(done) {
+    title(u('gzipped'))
+    .then(function(title) {
+      assert.equal(title, 'Huolimattomalle tankkaajalle voi räpsähtää tuhansien eurojen lasku | Yle Uutiset | yle.fi');
+      done();
+    }).catch(function(err) {
+      throw err;
+    });
+  });
 });

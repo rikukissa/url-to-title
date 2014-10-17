@@ -1,6 +1,7 @@
 var fs = require('fs'),
     path = require('path'),
     express = require('express'),
+    compression = require('compression'),
     app = express();
 
 app.get('/default', function(req, res) {
@@ -37,6 +38,11 @@ app.get('/user-agent', function(req, res) {
   }
 
   res.send(title);
+});
+
+app.get('/gzipped', compression(), function(req, res) {
+  res.setHeader('content-type', 'text/html;');
+  res.sendfile(path.join(__dirname, 'files', 'UTF-8.html'));
 });
 
 if(require.main === module) {
