@@ -82,4 +82,24 @@ describe('Title scraper', function() {
       throw err;
     });
   });
+
+  it('should handle responses without a content-type header', function(done) {
+    title(u('no-content-type'))
+    .then(function(title) {
+      assert.equal(title, 'foo bar');
+      done();
+    }).catch(function(err) {
+      throw err;
+    });
+  });
+
+  it('should know how to handle gzipped content', function(done) {
+    title('http://cdn.livetv.sx/webplayer.php?t=ifrx&c=252139&lang=en&eid=272253&lid=252139&ci=167&si=2')
+    .then(function(title) {
+      assert.equal(title, 'LiveTV / WebPlayer');
+      done();
+    }).catch(function(err) {
+      throw err;
+    }).done();
+  });
 });

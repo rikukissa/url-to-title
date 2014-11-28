@@ -45,6 +45,11 @@ app.get('/gzipped', compression(), function(req, res) {
   res.sendfile(path.join(__dirname, 'files', 'UTF-8.html'));
 });
 
+app.get('/no-content-type', function(req, res) {
+  res.removeHeader('content-type');
+  res.send('<title>foo bar</title>');
+});
+
 if(require.main === module) {
   app.listen(9005);
 }
