@@ -1,6 +1,7 @@
 var assert = require('assert'),
-    title = require('../index');
-    mock = require('./mock-server')
+    title = require('../index'),
+    decoder = require('../lib/decoder'),
+    mock = require('./mock-server');
 
 before(function(done) {
   this.connection = mock.listen(9005, done);
@@ -92,4 +93,11 @@ describe('Title scraper', function() {
       throw err;
     });
   });
+
+  describe('decoder', function() {
+    it('it shouldn\'t throw an error when encoding is not defined', function(done) {
+      decoder('foo');
+      done();
+    });
+  })
 });
