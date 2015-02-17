@@ -1,3 +1,6 @@
+/* global before, after, describe, it */
+'use strict';
+
 var assert = require('assert'),
     title = require('../index'),
     decoder = require('../lib/decoder'),
@@ -99,5 +102,21 @@ describe('Title scraper', function() {
       decoder(new Buffer('foo'));
       done();
     });
-  })
+  });
+
+  describe('decoder', function() {
+    it('it shouldn\'t throw an error when encoding is not defined', function(done) {
+      decoder(new Buffer('foo'));
+      done();
+    });
+  });
+
+  it('should handle multiline titles', function(done) {
+    title(u('multiline'))
+    .then(function(title) {
+      assert.equal(title, 'foobar');
+      done();
+    });
+  });
+
 });

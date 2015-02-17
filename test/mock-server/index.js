@@ -1,5 +1,6 @@
-var fs = require('fs'),
-    path = require('path'),
+'use strict';
+
+var path = require('path'),
     express = require('express'),
     compression = require('compression'),
     app = express();
@@ -48,6 +49,10 @@ app.get('/gzipped', compression(), function(req, res) {
 app.get('/no-content-type', function(req, res) {
   res.removeHeader('content-type');
   res.send('<title>foo bar</title>');
+});
+
+app.get('/multiline', function(req, res) {
+  res.send('<title>\nfoo\nbar\n</title>');
 });
 
 if(require.main === module) {
