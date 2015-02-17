@@ -96,7 +96,7 @@ describe('Title scraper', function() {
 
   describe('decoder', function() {
     it('it shouldn\'t throw an error when encoding is not defined', function(done) {
-      decoder('foo');
+      decoder(new Buffer('foo'));
       done();
     });
   })

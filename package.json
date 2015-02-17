@@ -18,16 +18,16 @@
   "author": "Riku Rouvila",
   "license": "MIT",
   "dependencies": {
-    "request": "~2.34.0",
-    "iconv-lite": "~0.2.11",
-    "he": "~0.4.1",
-    "jschardet": "~1.1.0",
-    "lodash": "~2.4.1",
-    "bluebird": "~2.2.2"
+    "bluebird": "^2.2.2",
+    "he": "^0.4.1",
+    "iconv-lite": "^0.4.7",
+    "jschardet": "^1.1.0",
+    "lodash": "^3.2.0",
+    "request": "^2.53.0"
   },
   "devDependencies": {
-    "mocha": "~1.17.1",
+    "compression": "~1.2.0",
     "express": "~4.6.1",
-    "compression": "~1.2.0"
+    "mocha": "^2.1.0"
   }
 }
